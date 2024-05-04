@@ -25,7 +25,7 @@ function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={currentTheme}>
-                <Router basename = "ofmi-scoreboard">
+                <Router>
                     <Toolbar>
                         <div style={{ flexGrow: 1 }} />
                         <ThemeToggleButton theme={currentTheme} toggleTheme={toggleDarkMode} isDarkMode={darkMode} />
@@ -34,12 +34,12 @@ function App() {
 
                     <div>
                         <Routes>
-                            <Route path="/" element={<FeaturedContests />} />
-                            <Route path="/scoreboards" element={<SplitContest />} />
-                            <Route path="/contest" element={<Contest />} />
-                            <Route path="/contest/:id" element={<Contest />} />
-                            <Route path="/contest/admin/:id" element={<Contest admin={true} />} />
-                            <Route path="/merge" element={<StackComponent />} />
+                            <Route path="/ofmi-scoreboard" element={<FeaturedContests />} />
+                            <Route path="/ofmi-scoreboard/scoreboards" element={<SplitContest />} />
+                            <Route path="/ofmi-scoreboard/contest" element={<Contest />} />
+                            <Route path="/ofmi-scoreboard/contest/:id" element={<Contest />} />
+                            <Route path="/ofmi-scoreboard/contest/admin/:id" element={<Contest admin={true} />} />
+                            <Route path="/ofmi-scoreboard/merge" element={<StackComponent />} />
                         </Routes>
                     </div>
                 </Router>
