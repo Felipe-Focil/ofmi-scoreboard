@@ -24,7 +24,7 @@ function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={currentTheme}>
-                <Router>
+                <Router basename={"/ofmi-scoreboard/"}>
                     <Toolbar>
                         <div style={{ flexGrow: 1 }} />
                         <ThemeToggleButton theme={currentTheme} toggleTheme={toggleDarkMode} isDarkMode={darkMode} />
