@@ -3,13 +3,13 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { ThemeProvider } from '@mui/material/styles';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Toolbar from '@mui/material/Toolbar';
-import Contest from './Contest.jsx';
-import SplitContest from './SplitContest.jsx';
-import StackComponent from './StackComponent.jsx';
-import FullScreenButton from './FullScreenButton.jsx';
-import ThemeToggleButton from './ThemeToggleButton';
-import { lightTheme, darkTheme } from '../utils/Themes.jsx';
-import FeaturedContests from './FeaturedContests.jsx';
+import Contest from './components/Contest.jsx';
+import SplitContest from './components/SplitContest.jsx';
+import StackComponent from './components/StackComponent.jsx';
+import FullScreenButton from './components/FullScreenButton.jsx';
+import ThemeToggleButton from './components/ThemeToggleButton.jsx';
+import { lightTheme, darkTheme } from './utils/Themes.jsx';
+import FeaturedContests from './components/FeaturedContests.jsx';
 
 const queryClient = new QueryClient();
 
@@ -25,7 +25,7 @@ function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={currentTheme}>
-                <Router basename={"/ofmi-scoreboard/"}>
+                <Router>
                     <Toolbar>
                         <div style={{ flexGrow: 1 }} />
                         <ThemeToggleButton theme={currentTheme} toggleTheme={toggleDarkMode} isDarkMode={darkMode} />
