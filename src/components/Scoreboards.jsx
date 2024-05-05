@@ -57,6 +57,8 @@ const Scoreboards = ({ links, admin, gold = 0, silver = 0, bronze = 0, criteria 
             const problemSet = merged[0]["problems"];
             setProblems(problemSet);
 
+            
+
             startTime = new Date(startTime);
             finishTime = new Date(finishTime);
             const currentTime = new Date();
